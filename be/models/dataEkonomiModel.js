@@ -2,17 +2,13 @@ import { Sequelize } from "sequelize"
 import db from "../config/database.js"
 
 const DataEkonomi = db.define("ekonomi", {
-    id: {
-        type: Sequelize.STRING,
-        primaryKey: true,
-    },
-    E1: Sequelize.STRING,
-    E2: Sequelize.STRING,
-    E3: Sequelize.INTEGER,
-    E4: Sequelize.INTEGER,
-    E5: Sequelize.STRING,
+    E1: Sequelize.FLOAT,
+    E2: Sequelize.FLOAT,
+    E3: Sequelize.FLOAT,
+    E4: Sequelize.FLOAT,
+    E5: Sequelize.FLOAT,
 }, {
-    freezeTableName: true // <- penting ini!
+    freezeTableName: true 
 });
 
 
